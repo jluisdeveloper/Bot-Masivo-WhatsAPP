@@ -213,6 +213,12 @@ class BaileysProvider extends ProviderClass {
   }
 
 
+  /**
+   * Esta nota no sirve whatsapp dejo de permitir el envio de "botones",  solo se vera el boton en whatsapp web 
+   * quizas en IOS pero en android no, almenos no en versiones recientes solo en antiguas.
+   */
+
+
   sendButton = async (numberIn) => {
     const final = baileyCleanNumber(numberIn);
 
