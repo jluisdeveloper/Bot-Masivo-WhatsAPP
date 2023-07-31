@@ -205,13 +205,21 @@ class BaileysProvider extends ProviderClass {
     return await this.vendor.sendMessage(final,
       {
         // image: fs.readFileSync("/home/anarchist/Pictures/magna-cover.jpeg"),
-        image: readFileSync("/home/anarchist/Pictures/magna-cover-3.jpeg"),
-        caption: '*Más Información: https://magna.edu.pe/programas/supply-chain-management/*',
+        image: readFileSync("/home/anarchist/Imágenes/seguridad_electrica.mp4"),
+        // caption: '*Más Información: https://magna.edu.pe/programas/supply-chain-management/*',
         gifPlayback: true
       }
     )
   }
 
+  sendVideo = async (number) => {
+    const final = baileyCleanNumber(number)
+    return this.vendor.sendMessage(final, {
+      video: readFileSync("/home/anarchist/Imágenes/seguridad_electrica.mp4"),
+      // caption: "",
+      gifPlayback: { name: `magna`, gifPlayback: false },
+    })
+  }
 
   /**
    * Esta nota no sirve whatsapp dejo de permitir el envio de "botones",  solo se vera el boton en whatsapp web 
