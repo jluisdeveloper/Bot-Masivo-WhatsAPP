@@ -203,19 +203,22 @@ class BaileysProvider extends ProviderClass {
 
     // console.log(this.vendor)
     return await this.vendor.sendMessage(final,
-      {
-        // image: fs.readFileSync("/home/anarchist/Pictures/magna-cover.jpeg"),
-        image: readFileSync("/home/anarchist/Imágenes/seguridad_electrica.mp4"),
+      {        
+        // image: readFileSync("/home/anarchist/Imágenes/Vibracional_last.jpg"),
+        // image: readFileSync("/home/anarchist/Imágenes/post_bf.jpg"),
+        image: readFileSync("/home/anarchist/Imágenes/primavera_3_dias.jpeg"),
         // caption: '*Más Información: https://magna.edu.pe/programas/supply-chain-management/*',
         gifPlayback: true
       }
     )
   }
 
+  // post_bf
+
   sendVideo = async (number) => {
     const final = baileyCleanNumber(number)
     return this.vendor.sendMessage(final, {
-      video: readFileSync("/home/anarchist/Imágenes/seguridad_electrica.mp4"),
+      video: readFileSync("/home/anarchist/Imágenes/planner_regalo.mp4"),
       // caption: "",
       gifPlayback: { name: `magna`, gifPlayback: false },
     })
